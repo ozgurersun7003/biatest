@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
         
         <p className="hero-subtitle-clean">
-          Biabet destek merkezine hoş geldiniz. Size nasıl yardımcı olabiliriz?
+          Biabet destek merkezine hoş geldiniz. Size nasıl yardımcı2 olabiliriz?
         </p>
         
         <div className="search-box-clean">
