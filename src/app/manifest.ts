@@ -1,0 +1,48 @@
+import { MetadataRoute } from 'next'
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Biabet Destek - Modern Yardım Merkezi',
+    short_name: 'Biabet Destek',
+    description: 'Sorularınızın cevaplarını hızlıca bulun. Bonuslar, para yatırma, para çekme ve daha fazlası hakkında bilgi alın.',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#0A4D52',
+    theme_color: '#FFFFFF',
+    orientation: 'portrait-primary',
+    icons: [
+      {
+        src: '/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+      {
+        src: '/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+    ],
+    categories: ['support', 'help', 'documentation'],
+    lang: 'tr',
+    dir: 'ltr',
+    scope: '/',
+    shortcuts: [
+      {
+        name: 'Arama',
+        short_name: 'Ara',
+        description: 'Hızlı arama yap',
+        url: '/search',
+        icons: [{ src: '/icon-192.png', sizes: '192x192' }],
+      },
+      {
+        name: 'SSS',
+        short_name: 'SSS',
+        description: 'Sıkça sorulan sorular',
+        url: '/category/sss',
+        icons: [{ src: '/icon-192.png', sizes: '192x192' }],
+      },
+    ],
+  }
+}

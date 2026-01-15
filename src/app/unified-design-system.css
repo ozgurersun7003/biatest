@@ -1,0 +1,480 @@
+/* Unified Design System - Google Material Design 3 */
+/* Sunuma hazır, tutarlı ve profesyonel tasarım */
+
+:root {
+    /* Material Design 3 Color System */
+    --md-sys-color-primary: #4285F4;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #D3E3FD;
+    --md-sys-color-on-primary-container: #001B3D;
+    
+    --md-sys-color-secondary: #34A853;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #C8E6C9;
+    --md-sys-color-on-secondary-container: #00210B;
+    
+    --md-sys-color-tertiary: #FBBC04;
+    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-tertiary-container: #FEEFC3;
+    --md-sys-color-on-tertiary-container: #221A00;
+    
+    --md-sys-color-error: #B3261E;
+    --md-sys-color-on-error: #FFFFFF;
+    --md-sys-color-error-container: #F9DEDC;
+    --md-sys-color-on-error-container: #410E0B;
+    
+    --md-sys-color-background: #F8F9FA;
+    --md-sys-color-on-background: #202124;
+    --md-sys-color-surface: #FFFFFF;
+    --md-sys-color-on-surface: #202124;
+    --md-sys-color-surface-variant: #E8EAED;
+    --md-sys-color-on-surface-variant: #5F6368;
+    --md-sys-color-outline: #79747E;
+    --md-sys-color-outline-variant: #CAC4D0;
+    
+    /* Elevation System */
+    --md-elevation-0: none;
+    --md-elevation-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    --md-elevation-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    --md-elevation-3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    --md-elevation-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+    --md-elevation-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+    
+    /* Typography Scale */
+    --md-typescale-display-large: 57px;
+    --md-typescale-display-medium: 45px;
+    --md-typescale-display-small: 36px;
+    --md-typescale-headline-large: 32px;
+    --md-typescale-headline-medium: 28px;
+    --md-typescale-headline-small: 24px;
+    --md-typescale-title-large: 22px;
+    --md-typescale-title-medium: 16px;
+    --md-typescale-title-small: 14px;
+    --md-typescale-body-large: 16px;
+    --md-typescale-body-medium: 14px;
+    --md-typescale-body-small: 12px;
+    --md-typescale-label-large: 14px;
+    --md-typescale-label-medium: 12px;
+    --md-typescale-label-small: 11px;
+    
+    /* Spacing System */
+    --md-spacing-0: 0px;
+    --md-spacing-1: 4px;
+    --md-spacing-2: 8px;
+    --md-spacing-3: 12px;
+    --md-spacing-4: 16px;
+    --md-spacing-5: 20px;
+    --md-spacing-6: 24px;
+    --md-spacing-8: 32px;
+    --md-spacing-10: 40px;
+    --md-spacing-12: 48px;
+    --md-spacing-16: 64px;
+    
+    /* Border Radius */
+    --md-radius-xs: 4px;
+    --md-radius-sm: 8px;
+    --md-radius-md: 12px;
+    --md-radius-lg: 16px;
+    --md-radius-xl: 20px;
+    --md-radius-2xl: 24px;
+    --md-radius-3xl: 28px;
+    --md-radius-full: 9999px;
+    
+    /* Transitions */
+    --md-transition-standard: cubic-bezier(0.2, 0, 0, 1);
+    --md-transition-emphasized: cubic-bezier(0.2, 0, 0, 1);
+    --md-transition-decelerated: cubic-bezier(0, 0, 0.2, 1);
+    --md-transition-accelerated: cubic-bezier(0.4, 0, 1, 1);
+    
+    /* Duration */
+    --md-duration-short1: 50ms;
+    --md-duration-short2: 100ms;
+    --md-duration-short3: 150ms;
+    --md-duration-short4: 200ms;
+    --md-duration-medium1: 250ms;
+    --md-duration-medium2: 300ms;
+    --md-duration-medium3: 350ms;
+    --md-duration-medium4: 400ms;
+    --md-duration-long1: 450ms;
+    --md-duration-long2: 500ms;
+    --md-duration-long3: 550ms;
+    --md-duration-long4: 600ms;
+    --md-duration-extra-long1: 700ms;
+    --md-duration-extra-long2: 800ms;
+    --md-duration-extra-long3: 900ms;
+    --md-duration-extra-long4: 1000ms;
+}
+
+/* Global Base Styles */
+body {
+    background-color: var(--md-sys-color-background) !important;
+    color: var(--md-sys-color-on-background) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+/* Remove conflicting gradients and backgrounds */
+body {
+    background-image: none !important;
+    background-attachment: initial !important;
+}
+
+/* Hero Section - Clean Material Design */
+.hero {
+    background: linear-gradient(135deg, #4285F4 0%, #34A853 100%) !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-title {
+    color: #FFFFFF !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em;
+}
+
+.hero-title .highlight {
+    color: #FFFFFF !important;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Navbar - Clean White */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--md-elevation-1) !important;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant) !important;
+}
+
+.navbar.scrolled {
+    box-shadow: var(--md-elevation-2) !important;
+}
+
+/* Categories Section - Clean Background */
+.categories {
+    background: var(--md-sys-color-background) !important;
+    padding: 80px 0 !important;
+}
+
+.category-card {
+    background: var(--md-sys-color-surface) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    box-shadow: var(--md-elevation-1) !important;
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.category-card:hover {
+    box-shadow: var(--md-elevation-3) !important;
+    transform: translateY(-2px);
+}
+
+/* Featured Section - Clean */
+.featured {
+    background: var(--md-sys-color-background) !important;
+    padding: 48px 0 !important;
+}
+
+.featured-card {
+    background: var(--md-sys-color-surface) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    box-shadow: var(--md-elevation-1) !important;
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.featured-card:hover {
+    box-shadow: var(--md-elevation-3) !important;
+    transform: translateY(-2px);
+}
+
+/* Search Wrapper - Material Design */
+.search-wrapper {
+    background: var(--md-sys-color-surface) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    box-shadow: var(--md-elevation-2) !important;
+}
+
+.search-wrapper:focus-within {
+    border-color: var(--md-sys-color-primary) !important;
+    box-shadow: var(--md-elevation-4) !important;
+}
+
+.search-input {
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.search-input::placeholder {
+    color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+[data-theme="dark"] .search-input {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-btn {
+    background: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    box-shadow: var(--md-elevation-1) !important;
+}
+
+.search-btn:hover {
+    box-shadow: var(--md-elevation-2) !important;
+}
+
+/* Buttons - Material Design */
+.btn-primary {
+    background: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    box-shadow: var(--md-elevation-1) !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    box-shadow: var(--md-elevation-2) !important;
+}
+
+.btn-secondary {
+    background: var(--md-sys-color-surface-variant) !important;
+    color: var(--md-sys-color-on-surface-variant) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    box-shadow: var(--md-elevation-0) !important;
+}
+
+.btn-secondary:hover {
+    background: var(--md-sys-color-primary-container) !important;
+    color: var(--md-sys-color-on-primary-container) !important;
+    box-shadow: var(--md-elevation-1) !important;
+}
+
+/* Widgets - Clean Design */
+.recent-articles-widget,
+.favorites-widget {
+    background: var(--md-sys-color-surface) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    box-shadow: var(--md-elevation-2) !important;
+    border-radius: var(--md-radius-lg) !important;
+}
+
+.recent-articles-widget::before,
+.favorites-widget::before {
+    display: none !important;
+}
+
+.recent-articles-header h3,
+.favorites-header h3 {
+    color: var(--md-sys-color-primary) !important;
+    text-shadow: none !important;
+}
+
+.recent-article-item,
+.favorite-item {
+    background: var(--md-sys-color-surface-variant) !important;
+    border: 1px solid var(--md-sys-color-outline-variant) !important;
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.recent-article-item:hover,
+.favorite-item:hover {
+    background: var(--md-sys-color-primary-container) !important;
+    color: var(--md-sys-color-on-primary-container) !important;
+}
+
+.recent-article-item svg,
+.favorite-item svg:first-child {
+    color: var(--md-sys-color-primary) !important;
+}
+
+.recent-article-item span,
+.favorite-item span {
+    color: var(--md-sys-color-on-surface) !important;
+    text-decoration: none !important;
+}
+
+/* Remove gradient backgrounds from widgets */
+.recent-articles-widget,
+.favorites-widget {
+    background: var(--md-sys-color-surface) !important;
+}
+
+/* Footer */
+.footer {
+    background: var(--md-sys-color-surface) !important;
+    border-top: 1px solid var(--md-sys-color-outline-variant) !important;
+    color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+/* Page Hero - Unified Styling (Light First) */
+.page-hero {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+    padding: 80px 0 60px !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-bottom: 1px solid var(--md-sys-color-outline-variant, #E8EAED) !important;
+}
+
+.page-title {
+    font-size: clamp(32px, 5vw, 48px) !important;
+    font-weight: 800 !important;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    margin-bottom: 16px !important;
+    line-height: 1.2 !important;
+}
+
+.page-subtitle {
+    font-size: 18px !important;
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+    margin-bottom: 0 !important;
+}
+
+.breadcrumb-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    margin-bottom: 24px !important;
+    font-size: 14px !important;
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+.breadcrumb-nav a {
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    text-decoration: underline !important;
+}
+
+.breadcrumb-nav span {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+/* Page Content - Unified Styling */
+.page-content {
+    background: var(--md-sys-color-background, #F8F9FA) !important;
+    padding: 48px 0 !important;
+    min-height: 60vh !important;
+}
+
+/* Cards */
+.card-icon svg {
+    color: var(--md-sys-color-primary) !important;
+}
+
+.card-title {
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.card-description {
+    color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+/* Remove all gradient backgrounds except hero */
+section:not(.hero) {
+    background-image: none !important;
+}
+
+/* Clean up search updates */
+.search-updates.css {
+    /* Will be overridden by unified system */
+}
+
+/* Contact Form - Material Design */
+.contact-form {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #E8EAED) !important;
+    border-radius: var(--md-radius-lg, 16px) !important;
+    padding: 32px !important;
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.form-label {
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    font-weight: 600 !important;
+}
+
+.form-input,
+.form-textarea {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #E8EAED) !important;
+    border-radius: var(--md-radius-md, 12px) !important;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none !important;
+    border-color: var(--md-sys-color-primary, #4285F4) !important;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1) !important;
+}
+
+.form-submit {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    color: var(--md-sys-color-on-primary, #FFFFFF) !important;
+    border: none !important;
+    border-radius: var(--md-radius-2xl, 24px) !important;
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.form-submit:hover {
+    box-shadow: var(--md-elevation-2, 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3)) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 16px 60px;
+    }
+    
+    .categories {
+        padding: 60px 0 !important;
+    }
+    
+    .featured {
+        padding: 32px 0 !important;
+    }
+    
+    .page-hero {
+        padding: 60px 0 40px !important;
+    }
+    
+    .page-title {
+        font-size: 28px !important;
+    }
+    
+    .page-subtitle {
+        font-size: 16px !important;
+    }
+}

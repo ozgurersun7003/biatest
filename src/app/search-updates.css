@@ -1,0 +1,709 @@
+/* Görseldeki tasarıma uygun güncellemeler */
+
+/* Search Container - Zarif, merkezlenmiş tasarım */
+.search-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto;
+    padding: 0 24px;
+    z-index: 1000 !important; /* Kategorilerin üzerine gelsin */
+    overflow: visible !important; /* Dropdown'un dışına çıkmasına izin ver */
+}
+
+/* Hero içindeki search container */
+.hero .search-container {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 32px auto 0;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1000 !important; /* Kategorilerin üzerine gelsin */
+    overflow: visible !important; /* Dropdown'un dışına çıkmasına izin ver */
+}
+
+.hero-content {
+    max-width: 1200px !important;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    overflow: visible !important; /* Dropdown'un dışına çıkmasına izin ver */
+}
+
+/* Hero section'ın overflow'unu düzelt */
+.hero {
+    overflow: visible !important; /* Dropdown'un kategorilere kadar uzaması için */
+}
+
+/* Body ve HTML overflow'unu kontrol et */
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+html {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.hero .search-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    z-index: 1000 !important; /* Kategorilere kadar devam etsin */
+}
+
+/* Search Wrapper - Zarif ve yumuşak tasarım */
+.search-wrapper {
+    position: relative !important;
+    display: flex;
+    align-items: center;
+    background: #1A5F7A !important; /* Mat koyu zeytin yeşili - arkası görünmesin */
+    border: none !important;
+    border-radius: 32px !important; /* Daha yumuşak köşeler */
+    padding: 6px 6px 6px 24px !important;
+    gap: 12px !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) !important; /* Daha zarif gölge */
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto !important;
+    z-index: 1000 !important; /* Kategorilerin üzerine gelsin */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Yumuşak geçiş */
+}
+
+.search-wrapper:focus-within {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 215, 0, 0.2) !important; /* Daha zarif focus gölgesi */
+    transform: translateY(-1px);
+    background: #1A5F7A !important; /* Mat koyu zeytin yeşili - focus'ta da mat */
+}
+
+.search-icon {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.search-input {
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    padding: 12px 0 !important;
+}
+
+.search-input::placeholder {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+[data-theme="dark"] .search-input {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-btn {
+    padding: 12px 28px !important;
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    color: var(--md-sys-color-on-primary, #FFFFFF) !important;
+    border-radius: 24px !important;
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15)) !important;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Yumuşak geçiş */
+    font-weight: 600 !important;
+}
+
+.search-btn:hover {
+    background: var(--md-sys-color-primary-dark, #1967D2) !important;
+    box-shadow: var(--md-elevation-2, 0px 2px 6px 2px rgba(0, 0, 0, 0.15)) !important;
+    transform: translateY(-1px);
+}
+
+/* Hero Title - Beyaz */
+.hero-title {
+    color: #ffffff !important;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Search History - Popüler Aramalar */
+.search-history {
+    margin-top: 32px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-history-section {
+    margin-bottom: 24px;
+}
+
+.search-history-section h3 {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.search-history-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.search-history-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #ffffff !important; /* Beyaz butonlar */
+    color: #1A5F7A !important; /* Koyu zeytin yeşili text */
+    border: none !important;
+    border-radius: 20px !important;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.search-history-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    background: #f8f9fa !important;
+}
+
+.search-history-item svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: #1A5F7A !important;
+}
+
+.search-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.search-history-clear {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.search-history-clear:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* User Widgets Section - Sidebar Tasarımı */
+.user-widgets {
+    padding: 48px 0;
+    margin-top: 64px;
+}
+
+.widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Recent Articles Widget - Material Design Gradient */
+.recent-articles-widget {
+    background: linear-gradient(180deg, #FFD700 0%, #FDB813 20%, #1A5F7A 80%, #0A4D52 100%);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recent-articles-widget:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.recent-articles-widget::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.1) 0%, rgba(26, 95, 122, 0.1) 100%);
+    pointer-events: none;
+}
+
+.recent-articles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.recent-articles-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    text-shadow: none !important;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.recent-articles-clear {
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #CAC4D0) !important;
+    border-radius: 16px !important;
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--md-elevation-0, none) !important;
+}
+
+.recent-articles-clear:hover {
+    background: var(--md-sys-color-primary-container, #D3E3FD) !important;
+    color: var(--md-sys-color-on-primary-container, #001B3D) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.recent-articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+    max-height: 210px; /* Maksimum 3 item göster (her biri ~70px, 3x70=210px) */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px; /* Scrollbar için boşluk */
+}
+
+.recent-articles-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.recent-articles-list::-webkit-scrollbar-track {
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+    border-radius: 4px;
+}
+
+.recent-articles-list::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    border-radius: 4px;
+    opacity: 0.5;
+}
+
+.recent-articles-list::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    opacity: 0.7;
+}
+
+.recent-article-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+    backdrop-filter: none !important;
+    border-radius: 16px;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--md-sys-color-outline-variant, #CAC4D0) !important;
+    min-height: 60px;
+    flex-shrink: 0;
+}
+
+.recent-article-item:hover {
+    background: var(--md-sys-color-primary-container, #D3E3FD) !important;
+    color: var(--md-sys-color-on-primary-container, #001B3D) !important;
+    transform: translateX(2px);
+    border-color: var(--md-sys-color-primary, #4285F4) !important;
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.recent-article-item svg {
+    width: 18px;
+    height: 18px;
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    flex-shrink: 0;
+    opacity: 1;
+}
+
+.recent-article-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    text-decoration: none;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Favorites Widget - Material Design */
+.favorites-widget {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #E8EAED) !important;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: var(--md-elevation-2, 0px 2px 6px 2px rgba(0, 0, 0, 0.15)) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.favorites-widget::before {
+    display: none !important;
+}
+
+.favorites-widget:hover {
+    box-shadow: var(--md-elevation-3, 0px 4px 8px 3px rgba(0, 0, 0, 0.15)) !important;
+    transform: translateY(-2px);
+}
+
+.favorites-widget::before {
+    display: none !important;
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.1) 0%, rgba(26, 95, 122, 0.1) 100%);
+    pointer-events: none;
+}
+
+.favorites-widget.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    text-align: center;
+}
+
+.favorites-widget.empty svg {
+    width: 48px;
+    height: 48px;
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.favorites-widget.empty p {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+    font-size: 16px;
+}
+
+.favorites-header {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.favorites-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    text-shadow: none !important;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+    max-height: 210px; /* Maksimum 3 item göster (her biri ~70px, 3x70=210px) */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px; /* Scrollbar için boşluk */
+}
+
+.favorites-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.favorites-list::-webkit-scrollbar-track {
+    background: var(--md-sys-color-surface-variant, #E8EAED);
+    border-radius: 4px;
+}
+
+.favorites-list::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-primary, #4285F4);
+    border-radius: 4px;
+    opacity: 0.5;
+}
+
+.favorites-list::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-primary, #4285F4);
+    opacity: 0.7;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+    backdrop-filter: none !important;
+    border-radius: 16px;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--md-sys-color-outline-variant, #CAC4D0) !important;
+    position: relative;
+    min-height: 60px;
+    flex-shrink: 0;
+}
+
+.favorite-item:hover {
+    background: var(--md-sys-color-primary-container, #D3E3FD) !important;
+    color: var(--md-sys-color-on-primary-container, #001B3D) !important;
+    transform: translateX(2px);
+    border-color: var(--md-sys-color-primary, #4285F4) !important;
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.favorite-item svg:first-child {
+    width: 18px;
+    height: 18px;
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    flex-shrink: 0;
+    opacity: 1;
+}
+
+.favorite-item span {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface, #202124) !important;
+    text-decoration: none;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.favorite-remove {
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #CAC4D0) !important;
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    padding: 0;
+    margin-left: auto;
+    box-shadow: var(--md-elevation-0, none) !important;
+}
+
+.favorite-remove:hover {
+    background: var(--md-sys-color-error-container, #F9DEDC) !important;
+    border-color: var(--md-sys-color-error, #B3261E) !important;
+    transform: scale(1.05);
+    box-shadow: var(--md-elevation-1, 0px 1px 3px 1px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.favorite-remove svg {
+    width: 12px;
+    height: 12px;
+    color: var(--md-sys-color-error, #B3261E) !important;
+    stroke-width: 2.5;
+}
+
+/* Search Results Dropdown - Beyaz tasarım, saydam ve kategorilere kadar devam eden */
+.search-results-dropdown {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #ffffff !important; /* Mat beyaz arka plan - arkası görünmesin */
+    /* backdrop-filter kaldırıldı - mat görünüm için */
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    max-height: 270px !important; /* Maksimum 3 sonuç göster (her biri ~90px, 3x90=270px) */
+    overflow-y: auto !important; /* Scroll ile geri kalanları göster */
+    overflow-x: hidden !important;
+    z-index: 1001 !important; /* Arama kutusunun üzerinde */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    margin-top: 8px !important;
+    /* Kategorilere kadar uzaması için */
+    bottom: auto !important;
+}
+
+.search-results-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 4px;
+}
+
+.search-results-dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.5);
+}
+
+.search-result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent !important;
+    min-height: 90px; /* Her item'ın minimum yüksekliği */
+    flex-shrink: 0; /* Item'ların küçülmesini engelle */
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: rgba(26, 95, 122, 0.05) !important; /* Açık zeytin yeşili hover */
+}
+
+.search-result-item.selected {
+    background: rgba(255, 215, 0, 0.1) !important; /* Açık sarı seçili */
+}
+
+.search-result-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #FF8C42; /* Turuncu konuşma balonu rengi */
+    margin-top: 2px;
+}
+
+.search-result-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-result-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A5F7A !important; /* Koyu zeytin yeşili text */
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.search-result-meta {
+    font-size: 13px;
+    color: rgba(26, 95, 122, 0.7) !important; /* Koyu zeytin yeşili text */
+    margin-bottom: 4px;
+}
+
+.search-result-snippet {
+    font-size: 14px;
+    color: rgba(26, 95, 122, 0.8) !important; /* Koyu zeytin yeşili text */
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+.search-result-arrow {
+    color: rgba(26, 95, 122, 0.5) !important; /* Koyu zeytin yeşili arrow */
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.search-result-item:hover .search-result-arrow {
+    color: #FFD700 !important; /* Sarı hover */
+    transform: translateX(4px);
+}
+
+/* Kategoriler bölümünün z-index'ini düşür ki arama kutusu üzerine gelebilsin */
+.categories {
+    position: relative;
+    z-index: 1 !important; /* Arama kutusunun altında */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Arama kutusu açıldığında kategorileri gizle */
+body.search-dropdown-open .categories {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.category-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-wrapper {
+        min-width: 100%;
+        padding: 4px 4px 4px 16px !important;
+    }
+    
+    .widgets-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .recent-articles-widget,
+    .favorites-widget {
+        padding: 24px;
+    }
+    
+    .recent-articles-header h3,
+    .favorites-header h3 {
+        font-size: 24px;
+    }
+    
+    .search-results-dropdown {
+        max-height: 400px;
+    }
+    
+    .search-result-item {
+        padding: 12px 16px;
+    }
+    
+    .search-result-title {
+        font-size: 14px;
+    }
+    
+    .search-result-snippet {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,319 @@
+/* ============================================
+   BIABET DESIGN SYSTEM
+   Modern, Accessible, Performant
+   Version: 2.0
+   Date: January 15, 2026
+   ============================================ */
+
+:root {
+  /* ==========================================
+     COLOR SYSTEM - Simplified & Consistent
+     ========================================== */
+  
+  /* Primary - Gold/Yellow */
+  --primary-50: #FFFEF7;
+  --primary-100: #FFF9E6;
+  --primary-200: #FFF0B3;
+  --primary-300: #FFE680;
+  --primary-400: #FFDD4D;
+  --primary-500: #FFD700;  /* Main Gold */
+  --primary-600: #FDB813;  /* Mustard */
+  --primary-700: #E6A800;
+  --primary-800: #B38600;
+  --primary-900: #996F00;
+  
+  /* Secondary - Teal/Aqua */
+  --secondary-50: #F0F9FA;
+  --secondary-100: #D4EEF1;
+  --secondary-200: #A9DDE3;
+  --secondary-300: #7ECCD5;
+  --secondary-400: #53BBC7;
+  --secondary-500: #1A5F7A;  /* Main Teal */
+  --secondary-600: #0D7377;
+  --secondary-700: #0A4D52;  /* Dark Teal */
+  --secondary-800: #063238;
+  --secondary-900: #041F23;
+  
+  /* Neutral - Better Contrast */
+  --neutral-50: #FAFAFA;
+  --neutral-100: #F5F5F5;
+  --neutral-200: #E5E5E5;
+  --neutral-300: #D4D4D4;
+  --neutral-400: #A3A3A3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  
+  /* Semantic Colors */
+  --success-500: #10B981;
+  --success-600: #059669;
+  --warning-500: #F59E0B;
+  --warning-600: #D97706;
+  --error-500: #EF4444;
+  --error-600: #DC2626;
+  --info-500: #3B82F6;
+  --info-600: #2563EB;
+  
+  /* ==========================================
+     TYPOGRAPHY SYSTEM
+     ========================================== */
+  
+  /* Font Family */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Font Sizes - Type Scale */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 3.75rem;     /* 60px */
+  --text-7xl: 4.5rem;      /* 72px */
+  
+  /* Font Weights - Reduced to 3 */
+  --font-normal: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+  --leading-loose: 1.8;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.01em;
+  
+  /* ==========================================
+     SPACING SYSTEM - 8pt Grid
+     ========================================== */
+  
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  
+  /* ==========================================
+     BORDER RADIUS
+     ========================================== */
+  
+  --radius-none: 0;
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.25rem;  /* 20px */
+  --radius-2xl: 1.5rem;  /* 24px */
+  --radius-full: 9999px;
+  
+  /* ==========================================
+     SHADOWS - Reduced to 3 levels
+     ========================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.08),
+               0 2px 4px 0 rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 24px 0 rgba(0, 0, 0, 0.12),
+               0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  
+  /* Accent Shadows - Only for special cases */
+  --shadow-primary: 0 4px 16px rgba(255, 215, 0, 0.25);
+  --shadow-secondary: 0 4px 16px rgba(26, 95, 122, 0.25);
+  
+  /* ==========================================
+     TRANSITIONS
+     ========================================== */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ==========================================
+     Z-INDEX SCALE
+     ========================================== */
+  
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ==========================================
+   LIGHT THEME (Default)
+   ========================================== */
+
+:root,
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: var(--neutral-50);
+  --bg-tertiary: var(--neutral-100);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Text Colors */
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-700);
+  --text-tertiary: var(--neutral-500);
+  --text-inverse: #FFFFFF;
+  
+  /* Border Colors */
+  --border-primary: var(--neutral-200);
+  --border-secondary: var(--neutral-300);
+  --border-focus: var(--primary-500);
+  
+  /* Component Specific */
+  --card-bg: #FFFFFF;
+  --card-border: var(--neutral-200);
+  --input-bg: #FFFFFF;
+  --input-border: var(--neutral-300);
+  
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================
+   DARK THEME
+   ========================================== */
+
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: var(--secondary-800);
+  --bg-secondary: var(--secondary-700);
+  --bg-tertiary: var(--secondary-600);
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+  
+  /* Text Colors - Improved Contrast */
+  --text-primary: #F9FAFB;
+  --text-secondary: #E5E7EB;
+  --text-tertiary: #9CA3AF;
+  --text-inverse: var(--neutral-900);
+  
+  /* Border Colors */
+  --border-primary: rgba(255, 215, 0, 0.15);
+  --border-secondary: rgba(255, 215, 0, 0.25);
+  --border-focus: var(--primary-500);
+  
+  /* Component Specific */
+  --card-bg: rgba(26, 95, 122, 0.3);
+  --card-border: rgba(255, 215, 0, 0.15);
+  --input-bg: rgba(26, 95, 122, 0.5);
+  --input-border: rgba(255, 215, 0, 0.2);
+  
+  /* Glass Effect */
+  --glass-bg: rgba(10, 77, 82, 0.7);
+  --glass-border: rgba(255, 215, 0, 0.2);
+  
+  /* Shadows - Darker for dark theme */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
+               0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 24px 0 rgba(0, 0, 0, 0.5),
+               0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+/* Text Utilities */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-inverse { color: var(--text-inverse); }
+
+/* Background Utilities */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+
+/* Border Utilities */
+.border { border: 1px solid var(--border-primary); }
+.border-secondary { border: 1px solid var(--border-secondary); }
+
+/* Shadow Utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Radius Utilities */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: var(--radius-2xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+/* Focus Visible */
+*:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --border-primary: var(--neutral-900);
+    --border-secondary: var(--neutral-800);
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+}

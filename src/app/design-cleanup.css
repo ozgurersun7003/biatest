@@ -1,0 +1,131 @@
+/* Design Cleanup - Remove all conflicting gradients and colors */
+/* This file ensures Material Design consistency across the site */
+
+/* Remove all gradient backgrounds except hero */
+body {
+    background: var(--md-sys-color-background, #F8F9FA) !important;
+    background-image: none !important;
+    background-attachment: initial !important;
+}
+
+/* Clean up search wrapper in hero */
+.hero .search-wrapper {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+    border: 1px solid var(--md-sys-color-outline-variant, #E8EAED) !important;
+    box-shadow: var(--md-elevation-2, 0px 2px 6px 2px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.hero .search-wrapper:focus-within {
+    border-color: var(--md-sys-color-primary, #4285F4) !important;
+    box-shadow: var(--md-elevation-4, 0px 6px 10px 4px rgba(0, 0, 0, 0.15)) !important;
+}
+
+.hero .search-icon {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+.hero .search-input {
+    color: var(--md-sys-color-on-surface, #202124) !important;
+}
+
+.hero .search-input::placeholder {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+[data-theme="dark"] .hero .search-input {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .hero .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.hero .search-btn {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    color: var(--md-sys-color-on-primary, #FFFFFF) !important;
+}
+
+.hero .search-btn:hover {
+    background: var(--md-sys-color-primary-dark, #1967D2) !important;
+}
+
+/* Remove gradient from recent articles widget */
+.recent-articles-widget {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+}
+
+.recent-articles-widget::before {
+    display: none !important;
+}
+
+/* Remove gradient from favorites widget */
+.favorites-widget {
+    background: var(--md-sys-color-surface, #FFFFFF) !important;
+}
+
+.favorites-widget::before {
+    display: none !important;
+}
+
+/* Clean up empty state */
+.favorites-widget.empty svg {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+.favorites-widget.empty p {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+/* Scrollbar colors */
+.recent-articles-list::-webkit-scrollbar-track,
+.favorites-list::-webkit-scrollbar-track {
+    background: var(--md-sys-color-surface-variant, #E8EAED) !important;
+}
+
+.recent-articles-list::-webkit-scrollbar-thumb,
+.favorites-list::-webkit-scrollbar-thumb {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    opacity: 0.5;
+}
+
+.recent-articles-list::-webkit-scrollbar-thumb:hover,
+.favorites-list::-webkit-scrollbar-thumb:hover {
+    background: var(--md-sys-color-primary, #4285F4) !important;
+    opacity: 0.7;
+}
+
+/* Categories section */
+.categories {
+    background: var(--md-sys-color-background, #F8F9FA) !important;
+}
+
+/* Featured section */
+.featured {
+    background: var(--md-sys-color-background, #F8F9FA) !important;
+}
+
+/* Remove all other gradient backgrounds */
+section:not(.hero) {
+    background-image: none !important;
+}
+
+/* Ensure consistent text colors */
+.card-title {
+    color: var(--md-sys-color-on-surface, #202124) !important;
+}
+
+.card-description {
+    color: var(--md-sys-color-on-surface-variant, #5F6368) !important;
+}
+
+.section-title {
+    color: var(--md-sys-color-on-background, #202124) !important;
+}
+
+.title-accent {
+    color: var(--md-sys-color-primary, #4285F4) !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+}
